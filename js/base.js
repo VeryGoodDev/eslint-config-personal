@@ -245,7 +245,7 @@ module.exports = {
     'no-multi-str': `error`,
     // I think it's worthwhile and usually correct, may revisit as needed if it causes more pain than it saves
     'no-negated-condition': `error`,
-    'no-nested-ternary': `error`,\
+    'no-nested-ternary': `error`,
     // Only prevents new operator when not used in an assignment or comparison https://eslint.org/docs/rules/no-new
     'no-new': `error`,
     'no-new-func': `error`,
