@@ -565,13 +565,8 @@ module.exports = {
     'generator-star-spacing': [`warn`, `after`],
     // Better handled by prettier formatting IMO
     'implicit-arrow-linebreak': `off`,
-    indent: [
-      `warn`,
-      2,
-      {
-        SwitchCase: 1,
-      },
-    ],
+    // Better handled by prettier formatting IMO
+    indent: `off`,
     // TODO: Might be worth only having in react configs
     'jsx-quotes': [`warn`, `prefer-double`],
     'key-spacing': [
