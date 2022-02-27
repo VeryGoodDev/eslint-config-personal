@@ -530,16 +530,8 @@ module.exports = {
         allowSingleLine: true,
       },
     ],
-    'comma-dangle': [
-      `error`,
-      {
-        arrays: `always-multiline`,
-        objects: `always-multiline`,
-        imports: `always-multiline`,
-        exports: `always-multiline`,
-        functions: `never`,
-      },
-    ],
+    // Handled by prettier/prettier rule
+    'comma-dangle': `off`,
     'comma-spacing': [
       `warn`,
       {
