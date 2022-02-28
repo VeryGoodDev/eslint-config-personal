@@ -34,7 +34,6 @@ module.exports = {
     'no-control-regex': `error`,
     'no-debugger': `error`,
     'no-dupe-args': `error`,
-    // TODO: Remove for TS base, https://eslint.org/docs/rules/no-dupe-class-members#when-not-to-use-it
     'no-dupe-class-members': `error`,
     'no-dupe-else-if': `error`,
     'no-dupe-keys': `error`,
