@@ -48,6 +48,29 @@ module.exports = {
     ],
     'react/forbid-dom-props': `off`,
     'react/forbid-elements': `off`,
+    'react/forbid-foreign-prop-types': [
+      `warn`,
+      {
+        allowInPropTypes: false,
+      },
+    ],
+    'react/forbid-prop-types': [
+      `error`,
+      {
+        forbid: [`any`, `array`, `object`],
+        checkContextTypes: false,
+        checkChildContextTypes: false,
+      },
+    ],
+    'react/function-component-definition': [
+      `warn`,
+      {
+        namedComponents: `arrow-function`,
+        unnamedComponents: `arrow-function`,
+      },
+    ],
+    'react/hook-use-state': `error`,
+    'react/iframe-missing-sandbox': `error`,
   },
   // TODO: Settings e.g. pragma and fragment https://github.com/yannickcr/eslint-plugin-react#configuration
 }
