@@ -6,6 +6,7 @@
   "repository": "https://github.com/verygooddev/eslint-config-personal",
   "author": "VeryGoodDev <very_good_dev@outlook.com>",
   "license": "MIT",
+  "type": "module",
   "exports": {
     ".": "./index.js",
     "./js": "./js/base.js",
