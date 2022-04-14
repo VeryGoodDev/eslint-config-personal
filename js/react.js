@@ -1,4 +1,4 @@
-/* eslint-disable sort-keys */
+/* eslint-disable sort-keys, no-magic-numbers */
 module.exports = {
   extends: [`./base.js`],
   plugins: [`react`],
@@ -57,9 +57,9 @@ module.exports = {
     'react/forbid-prop-types': [
       `error`,
       {
-        forbid: [`any`, `array`, `object`],
-        checkContextTypes: false,
         checkChildContextTypes: false,
+        checkContextTypes: false,
+        forbid: [`any`, `array`, `object`],
       },
     ],
     'react/function-component-definition': [
@@ -121,8 +121,8 @@ module.exports = {
     'react/no-unused-prop-types': [
       `error`,
       {
-        ignore: [],
         customValidators: [],
+        ignore: [],
         skipShapeProps: true,
       },
     ],
@@ -135,8 +135,8 @@ module.exports = {
     'react/prop-types': [
       `error`,
       {
-        ignore: [],
         customValidators: [],
+        ignore: [],
         skipUndeclared: false,
       },
     ],
@@ -173,6 +173,185 @@ module.exports = {
     'react/static-property-placement': [`error`, `static public field`],
     'react/style-prop-object': [`error`, { allow: [] }],
     'react/void-dom-elements-no-children': `error`,
+
+    // JSX-specific rules
+    'react/jsx-boolean-value': [`error`, `always`],
+    'react/jsx-child-element-spacing': `error`,
+    'react/jsx-closing-bracket-location': [`error`, `tag-aligned`],
+    'react/jsx-closing-tag-location': `error`,
+    'react/jsx-curly-brace-presence': [
+      `error`,
+      {
+        children: `never`,
+        propElementValues: `always`,
+        props: `never`,
+      },
+    ],
+    // The prettier/prettier rule might conflict or handle this better, turn off if so
+    'react/jsx-curly-newline': [
+      `error`,
+      {
+        multiline: `consistent`,
+        singleline: `forbid`,
+      },
+    ],
+    'react/jsx-curly-spacing': [
+      `error`,
+      {
+        allowMultiline: true,
+        attributes: true,
+        children: true,
+        when: `never`,
+      },
+    ],
+    'react/jsx-equals-spacing': [`error`, `never`],
+    'react/jsx-filename-extension': [
+      `error`,
+      {
+        allow: `always`,
+        extensions: [`.jsx`, `.tsx`],
+      },
+    ],
+    'react/jsx-first-prop-new-line': [`error`, `multiline`],
+    'react/jsx-fragments': [`error`, `syntax`],
+    'react/jsx-handler-names': [
+      `error`,
+      {
+        checkInlineFunction: false,
+        checkLocalVariables: false,
+        eventHandlerPrefix: `handle`,
+        eventHandlerPropPrefix: `on`,
+      },
+    ],
+    // This may conflict with prettier/prettier, disable if so
+    'react/jsx-indent': [
+      `error`,
+      2, // This is how many spaces to indent
+      {
+        checkAttributes: true,
+        indentLogicalExpressions: true,
+      },
+    ],
+    'react/jsx-indent-props': [`error`, 2],
+    'react/jsx-key': [
+      `error`,
+      {
+        checkFragmentShorthand: true,
+        checkKeyMustBeforeSpread: true,
+        warnOnDuplicates: true,
+      },
+    ],
+    'react/jsx-max-depth': `off`,
+    'react/jsx-max-props-per-line': [
+      `error`,
+      {
+        maximum: {
+          multi: 1,
+          single: 3,
+        },
+      },
+    ],
+    'react/jsx-newline': [
+      `error`,
+      {
+        prevent: true,
+      },
+    ],
+    'react/jsx-no-bind': [
+      `error`,
+      {
+        allowArrowFunctions: false,
+        allowBind: false,
+        allowFunctions: false,
+        ignoreDOMComponents: false,
+        ignoreRefs: true,
+      },
+    ],
+    'react/jsx-no-comment-textnodes': `error`,
+    'react/jsx-no-constructed-context-values': `error`,
+    'react/jsx-no-duplicate-props': [`error`, { ignoreCase: false }],
+    'react/jsx-no-literals': `off`,
+    'react/jsx-no-script-url': `error`,
+    'react/jsx-no-target-blank': [
+      `error`,
+      {
+        allowReferrer: true,
+        enforceDynamicLinks: `always`,
+        forms: true,
+        links: true,
+        warnOnSpreadAttributes: false,
+      },
+    ],
+    'react/jsx-no-undef': `error`,
+    'react/jsx-no-useless-fragment': [
+      `error`,
+      {
+        // TODO: Override for TS config probably
+        allowExpressions: false,
+      },
+    ],
+    // May conflict with prettier/prettier, disable if so
+    'react/jsx-one-expression-per-line': [
+      `error`,
+      {
+        allow: `literal`,
+      },
+    ],
+    'react/jsx-pascal-case': [
+      `error`,
+      {
+        allowAllCaps: false,
+        allowLeadingUnderscore: false,
+        allowNamespace: false,
+        ignore: [],
+      },
+    ],
+    // Docs note that this isn't needed with no-multi-spaces in regular eslint
+    'react/jsx-props-no-multi-spaces': `off`,
+    'react/jsx-props-no-spreading': `off`,
+    'react/jsx-sort-default-props': [
+      `error`,
+      {
+        ignoreCase: false,
+      },
+    ],
+    'react/jsx-sort-props': [
+      `error`,
+      {
+        callbacksLast: true,
+        multiline: `last`,
+        noSortAlphabetically: false,
+        reservedFirst: [`key`, `ref`],
+        shorthandFirst: true,
+        shorthandLast: false,
+      },
+    ],
+    'react/jsx-tag-spacing': [
+      `error`,
+      {
+        afterOpening: `never`,
+        // This one may need to go back to default of "allow" if it causes problems
+        beforeClosing: `multiline-always`,
+        beforeSelfClosing: `always`,
+        closingSlash: `never`,
+      },
+    ],
+    // Disabled because for React, latest versions will be used, which since v17 use a new runtime transform; and for Preact, esbuild should be able to inject as long as its needed
+    'react/jsx-uses-react': `off`,
+    'react/jsx-uses-vars': `error`,
+    'react/jsx-wrap-multilines': [
+      `error`,
+      {
+        declaration: `parens`,
+        assignment: `parens`,
+        return: `parens`,
+        arrow: `parens`,
+        condition: `ignore`,
+        logical: `ignore`,
+        prop: `ignore`,
+      },
+    ],
   },
   // TODO: Settings e.g. pragma and fragment https://github.com/yannickcr/eslint-plugin-react#configuration
+  // TODO: Preact-specific tweaks based on https://github.com/preactjs/eslint-config-preact/blob/master/index.js
 }
