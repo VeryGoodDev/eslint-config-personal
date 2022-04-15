@@ -8,10 +8,21 @@
   "license": "MIT",
   "type": "module",
   "exports": {
-    ".": "./index.js",
-    "./js": "./js/base.js",
-    "./ts": "./ts/base.js"
+    ".": "./index.js"
   },
+  "exportsToCome": [
+    "./js",
+    "./ts",
+    "./react-js",
+    "./react-ts",
+    "./preact-js",
+    "./preact-ts",
+    "./node-js",
+    "./node-ts",
+    "./jest-js",
+    "./jest-ts",
+    ""
+  ],
   "scripts": {
     "lint": "eslint index.js"
   },

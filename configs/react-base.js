@@ -208,7 +208,7 @@ export default {
       `error`,
       {
         allow: `always`,
-        extensions: [`.jsx`, `.tsx`],
+        extensions: [`.jsx`],
       },
     ],
     'react/jsx-first-prop-new-line': [`error`, `multiline`],

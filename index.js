@@ -1,7 +1,7 @@
 /* eslint-disable sort-keys */
 module.exports = {
   plugins: [`@babel`, `html`, `jsx-a11y`, `react-hooks`],
-  extends: [`./js/base.js`],
+  extends: [`./configs/eslint-base.js`],
   parser: `@babel/eslint-parser`,
   env: {
     browser: true,
