@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: [`react`],
+  plugins: [`jsx-a11y`, `react`, `react-hooks`],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -11,6 +11,7 @@ module.exports = {
   // TODO: Settings e.g. pragma and fragment https://github.com/yannickcr/eslint-plugin-react#configuration
   // TODO: Preact-specific tweaks based on https://github.com/preactjs/eslint-config-preact/blob/master/index.js
   rules: {
+    // General React stuff
     'react/boolean-prop-naming': `off`,
     'react/button-has-type': [
       `error`,
@@ -351,5 +352,145 @@ module.exports = {
         prop: `ignore`,
       },
     ],
+
+    // Rules of hooks
+    'react-hooks/exhaustive-deps': `error`,
+    'react-hooks/rules-of-hooks': `error`,
+
+    // JSX A11y
+    'jsx-a11y/alt-text': [
+      `error`,
+      {
+        elements: [`area`, `img`, `input[type="image"]``object`],
+        // Can specify any custom components that should also be checked by specifying "domEl": ["Custom1"]
+      },
+    ],
+    'jsx-a11y/anchor-has-content': [
+      `error`,
+      {
+        // Link component(s) go in this array
+        components: [],
+      },
+    ],
+    'jsx-a11y/anchor-is-valid': [
+      `error`,
+      {
+        aspects: [`noHref`, `preferButton`, `invalidHref`],
+        components: [],
+        specialLink: [],
+      },
+    ],
+    'jsx-a11y/aria-activedescendant-has-tabindex': `error`,
+    'jsx-a11y/aria-props': `error`,
+    'jsx-a11y/aria-proptypes': `error`,
+    'jsx-a11y/aria-role': [
+      `error`,
+      {
+        allowedInvalidRoles: [],
+        ignoreNonDOM: false,
+      },
+    ],
+    'jsx-a11y/aria-unsupported-elements': `error`,
+    'jsx-a11y/autocomplete-valid': [
+      `error`,
+      {
+        inputComponents: [],
+      },
+    ],
+    'jsx-a11y/click-events-have-key-events': `error`,
+    'jsx-a11y/heading-has-content': [
+      `error`,
+      {
+        components: [],
+      },
+    ],
+    'jsx-a11y/html-has-lang': `error`,
+    'jsx-a11y/iframe-has-title': `error`,
+    'jsx-a11y/img-redundant-alt': [
+      `error`,
+      {
+        components: [],
+        words: [`image`, `photo`, `picture`],
+      },
+    ],
+    'jsx-a11y/interactive-supports-focus': [
+      `error`,
+      {
+        tabbable: [`button`, `checkbox`, `link`, `searchbox`, `spinbutton`, `switch`, `textbox`],
+      },
+    ],
+    'jsx-a11y/label-has-associated-control': [
+      `error`,
+      {
+        assert: `both`,
+        controlComponents: [],
+        depth: 3,
+        labelAttributes: [`for`, `htmlFor`, `label`],
+        labelComponents: [],
+      },
+    ],
+    'jsx-a11y/lang': `error`,
+    'jsx-a11y/media-has-caption': [
+      `error`,
+      {
+        audio: [],
+        track: [],
+        video: [],
+      },
+    ],
+    'jsx-a11y/mouse-events-have-key-events': `error`,
+    'jsx-a11y/no-access-key': `error`,
+    'jsx-a11y/no-autofocus': [
+      `error`,
+      {
+        ignoreNonDOM: false,
+      },
+    ],
+    'jsx-a11y/no-distracting-elements': `error`,
+    'jsx-a11y/no-interactive-element-to-noninteractive-role': [
+      `error`,
+      {
+        tr: [`none`, `presentation`],
+      },
+    ],
+    'jsx-a11y/no-noninteractive-element-interactions': [
+      `error`,
+      {
+        handlers: [`onClick`, `onKeyDown`, `onKeyPress`, `onKeyUp`, `onMouseDown`, `onMouseUp`],
+      },
+    ],
+    'jsx-a11y/no-noninteractive-element-to-interactive-role': [
+      `error`,
+      {
+        li: [`menuitem`, `option`, `row`, `tab`, `treeitem`],
+        ol: [`listbox`, `menu`, `menubar`, `radiogroup`, `tablist`, `tree`, `treegrid`],
+        table: [`grid`],
+        td: [`gridcell`],
+        ul: [`listbox`, `menu`, `menubar`, `radiogroup`, `tablist`, `tree`, `treegrid`],
+      },
+    ],
+    'jsx-a11y/no-noninteractive-tabindex': [
+      `error`,
+      {
+        roles: [`tabpanel`],
+        tags: [],
+      },
+    ],
+    'jsx-a11y/no-redundant-roles': [
+      `error`,
+      {
+        nav: [`navigation`],
+      },
+    ],
+    'jsx-a11y/no-static-element-interactions': [
+      `error`,
+      {
+        handlers: [`onClick`, `onKeyDown`, `onKeyPress`, `onKeyUp`, `onMouseDown`, `onMouseUp`],
+      },
+    ],
+    'jsx-a11y/role-has-required-aria-props': `error`,
+    'jsx-a11y/role-supports-aria-props': `error`,
+    'jsx-a11y/scope': `error`,
+    'jsx-a11y/tabindex-no-positive': `error`,
   },
 }
