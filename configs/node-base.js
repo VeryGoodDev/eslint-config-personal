@@ -1,5 +1,8 @@
 module.exports = {
   plugins: [`node`],
+  env: {
+    node: true,
+  },
   settings: {
     node: {
       allowModules: [`electron`],

@@ -10,16 +10,14 @@
     ".": "./index.js",
     "./browser-js": "./configs/browser-js.js",
     "./browser-ts": "./configs/browser-ts.js",
-    "./react-js": "./configs/react-js.js",
-    "./react-ts": "./configs/react-ts.js",
+    "./node-js": "./configs/node-js.js",
+    "./node-ts": "./configs/node-ts.js",
     "./preact-js": "./configs/preact-js.js",
-    "./preact-ts": "./configs/preact-ts.js"
+    "./preact-ts": "./configs/preact-ts.js",
+    "./react-js": "./configs/react-js.js",
+    "./react-ts": "./configs/react-ts.js"
   },
   "exportsToCome": [
-    "./preact-js",
-    "./preact-ts",
-    "./node-js",
-    "./node-ts",
     "./jest-js",
     "./jest-ts",
     ""
