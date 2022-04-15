@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   plugins: [`html`, `prettier`],
   env: {
     browser: true,

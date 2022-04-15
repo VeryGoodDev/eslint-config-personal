@@ -1,4 +1,3 @@
-/* eslint-disable sort-keys */
 module.exports = {
   plugins: [`@babel`, `html`, `jsx-a11y`, `react-hooks`],
   extends: [`./configs/eslint-base.js`],

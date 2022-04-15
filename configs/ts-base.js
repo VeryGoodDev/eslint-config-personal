@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   extends: [`../js/base.js`],
   parser: `@typescript-eslint/parser`,
   plugins: [`@typescript-eslint`],

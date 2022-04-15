@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   extends: [`./base.js`],
   plugins: [`react`],
   parserOptions: {
