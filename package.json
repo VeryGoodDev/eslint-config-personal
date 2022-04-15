@@ -9,11 +9,11 @@
   "exports": {
     ".": "./index.js",
     "./js": "./configs/eslint-base.js",
-    "./ts": "./configs/ts-base.js"
+    "./ts": "./configs/ts-base.js",
+    "./react-js": "./configs/react-js.js",
+    "./react-ts": "./configs/react-ts.js"
   },
   "exportsToCome": [
-    "./react-js",
-    "./react-ts",
     "./preact-js",
     "./preact-ts",
     "./node-js",
