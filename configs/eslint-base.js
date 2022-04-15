@@ -1,11 +1,5 @@
 module.exports = {
   plugins: [`html`, `prettier`],
-  env: {
-    browser: true,
-    node: true,
-    webextensions: true,
-    worker: true,
-  },
   parserOptions: {
     ecmaVersion: 2021,
     sourceType: `module`,
