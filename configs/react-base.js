@@ -1,5 +1,4 @@
 module.exports = {
-  extends: [`./base.js`],
   plugins: [`react`],
   parserOptions: {
     ecmaFeatures: {
@@ -9,6 +8,8 @@ module.exports = {
     sourceType: `module`,
     requireConfigFile: false,
   },
+  // TODO: Settings e.g. pragma and fragment https://github.com/yannickcr/eslint-plugin-react#configuration
+  // TODO: Preact-specific tweaks based on https://github.com/preactjs/eslint-config-preact/blob/master/index.js
   rules: {
     'react/boolean-prop-naming': `off`,
     'react/button-has-type': [
@@ -351,6 +352,4 @@ module.exports = {
       },
     ],
   },
-  // TODO: Settings e.g. pragma and fragment https://github.com/yannickcr/eslint-plugin-react#configuration
-  // TODO: Preact-specific tweaks based on https://github.com/preactjs/eslint-config-preact/blob/master/index.js
 }

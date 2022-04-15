@@ -1,5 +1,5 @@
 module.exports = {
-  extends: [`../js/base.js`],
+  extends: [`../eslint-base.js`],
   parser: `@typescript-eslint/parser`,
   plugins: [`@typescript-eslint`],
   rules: {
