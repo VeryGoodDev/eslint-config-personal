@@ -11,7 +11,9 @@
     "./browser-js": "./configs/browser-js.js",
     "./browser-ts": "./configs/browser-ts.js",
     "./react-js": "./configs/react-js.js",
-    "./react-ts": "./configs/react-ts.js"
+    "./react-ts": "./configs/react-ts.js",
+    "./preact-js": "./configs/preact-js.js",
+    "./preact-ts": "./configs/preact-ts.js"
   },
   "exportsToCome": [
     "./preact-js",
