@@ -7,11 +7,11 @@
   "author": "VeryGoodDev <very_good_dev@outlook.com>",
   "license": "MIT",
   "exports": {
-    ".": "./index.js"
+    ".": "./index.js",
+    "./js": "./configs/eslint-base.js",
+    "./ts": "./configs/ts-base.js"
   },
   "exportsToCome": [
-    "./js",
-    "./ts",
     "./react-js",
     "./react-ts",
     "./preact-js",
