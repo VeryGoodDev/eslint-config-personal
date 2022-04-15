@@ -42,6 +42,11 @@
   "eslintConfig": {
     "extends": [
       "./index.js"
-    ]
+    ],
+    "rules": {
+      "max-lines": "off",
+      "no-magic-numbers": "off",
+      "sort-keys": "off"
+    }
   }
 }
