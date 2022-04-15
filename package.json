@@ -55,6 +55,7 @@
       "./index.js"
     ],
     "rules": {
+      "id-length": "off",
       "max-lines": "off",
       "no-magic-numbers": "off",
       "sort-keys": "off"
