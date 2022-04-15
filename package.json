@@ -8,8 +8,8 @@
   "license": "MIT",
   "exports": {
     ".": "./index.js",
-    "./js": "./configs/eslint-base.js",
-    "./ts": "./configs/ts-base.js",
+    "./browser-js": "./configs/browser-js.js",
+    "./browser-ts": "./configs/browser-ts.js",
     "./react-js": "./configs/react-js.js",
     "./react-ts": "./configs/react-ts.js"
   },
