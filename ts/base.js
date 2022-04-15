@@ -1,5 +1,4 @@
-/* eslint-disable max-lines, sort-keys */
-module.exports = {
+export default {
   extends: [`../js/base.js`],
   parser: `@typescript-eslint/parser`,
   plugins: [`@typescript-eslint`],

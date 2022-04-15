@@ -1,5 +1,4 @@
-/* eslint-disable sort-keys, no-magic-numbers */
-module.exports = {
+export default {
   extends: [`./base.js`],
   plugins: [`react`],
   parserOptions: {

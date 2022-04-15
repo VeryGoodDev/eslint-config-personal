@@ -1,5 +1,4 @@
-/* eslint-disable max-lines, no-magic-numbers, sort-keys */
-module.exports = {
+export default {
   plugins: [`html`, `prettier`],
   env: {
     browser: true,
