@@ -15,7 +15,7 @@ const getExtension = (config, lang) => {
 const createOverride = (config, lang) => {
   const ext = getExtension(config, lang)
   return {
-    files: [`./test/${config}-${lang}.${ext}`],
+    files: [`./test/${config}.${ext}`],
     extends: `./configs/${config}-${lang}.js`,
   }
 }
