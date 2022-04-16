@@ -1,3 +1,3 @@
 module.exports = {
-  extends: [`./eslint-comments.js`, `./imports.js`],
+  extends: [`./eslint-comments.js`, `./imports.js`, `./promise.js`],
 }
