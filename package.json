@@ -10,6 +10,8 @@
     ".": "./index.js",
     "./browser-js": "./configs/browser-js.js",
     "./browser-ts": "./configs/browser-ts.js",
+    "./jest-js": "./configs/jest-js.js",
+    "./jest-ts": "./configs/jest-ts.js",
     "./node-js": "./configs/node-js.js",
     "./node-ts": "./configs/node-ts.js",
     "./preact-js": "./configs/preact-js.js",
