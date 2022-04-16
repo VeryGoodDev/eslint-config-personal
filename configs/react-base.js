@@ -130,7 +130,12 @@ module.exports = {
     'react/prefer-es6-class': [`error`, `always`],
     'react/prefer-exact-props': `off`,
     'react/prefer-read-only-props': `off`,
-    'react/prefer-stateless-function': [`error`, { ignorePureComponents: false }],
+    'react/prefer-stateless-function': [
+      `error`,
+      {
+        ignorePureComponents: false,
+      },
+    ],
     'react/prop-types': [
       `error`,
       {
