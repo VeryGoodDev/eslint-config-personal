@@ -19,6 +19,7 @@ const createOverride = (config, lang) => {
     extends: `./configs/${config}-${lang}.js`,
   }
 }
+// eslint-disable-next-line no-unused-vars -- Will be used once I set up the test files
 const testFileSetups = [`browser`, `jest`, `node`, `preact`, `react`].reduce(
   (acc, config) => [...acc, createOverride(config, `js`), createOverride(config, `ts`)],
   []
@@ -38,6 +39,6 @@ module.exports = {
         'import/no-commonjs': `off`,
       },
     },
-    ...testFileSetups,
+    // ...testFileSetups,
   ],
 }
