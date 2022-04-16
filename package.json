@@ -19,11 +19,6 @@
     "./react-js": "./configs/react-js.js",
     "./react-ts": "./configs/react-ts.js"
   },
-  "exportsToCome": [
-    "./jest-js",
-    "./jest-ts",
-    ""
-  ],
   "scripts": {
     "lint": "eslint index.js"
   },
