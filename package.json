@@ -1,6 +1,6 @@
 {
   "name": "@vgd/eslint-config-personal",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Personal preferences for eslint",
   "repository": "https://github.com/verygooddev/eslint-config-personal",
   "author": "VeryGoodDev <very_good_dev@outlook.com>",
@@ -18,6 +18,10 @@
     "./react-js": "./configs/react-js.js",
     "./react-ts": "./configs/react-ts.js"
   },
+  "files": [
+    "configs/*",
+    "utils/*"
+  ],
   "scripts": {
     "lint": "eslint ./test/*",
     "lint-configs": "eslint ./configs/**/*.js"
