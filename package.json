@@ -2,12 +2,11 @@
   "name": "eslint-config-personal",
   "version": "1.0.0",
   "description": "Personal preferences for eslint",
-  "main": "index.js",
   "repository": "https://github.com/verygooddev/eslint-config-personal",
   "author": "VeryGoodDev <very_good_dev@outlook.com>",
   "license": "MIT",
   "exports": {
-    ".": "./index.js",
+    ".": null,
     "./browser-js": "./configs/browser-js.js",
     "./browser-ts": "./configs/browser-ts.js",
     "./jest-js": "./configs/jest-js.js",
@@ -23,14 +22,8 @@
     "lint": "eslint index.js"
   },
   "dependencies": {
-    "@babel/core": "^7.13.10",
-    "@babel/eslint-parser": "^7.13.10",
-    "@babel/eslint-plugin": "^7.13.10",
-    "@babel/preset-env": "^7.13.10",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.12.1",
-    "eslint-config-airbnb": "^18.1.0",
-    "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-html": "^6.0.2",
     "eslint-plugin-import": "^2.20.1",
