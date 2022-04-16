@@ -353,8 +353,7 @@ module.exports = {
       `error`,
       {
         afterOpening: `never`,
-        // This one may need to go back to default of "allow" if it causes problems
-        beforeClosing: `multiline-always`,
+        beforeClosing: `allow`,
         beforeSelfClosing: `always`,
         closingSlash: `never`,
       },

@@ -45,13 +45,8 @@ module.exports = {
     'import/no-named-as-default-member': `error`,
     // NOTE: Mildly iffy about this one, will revisit if needed
     'import/no-named-as-default': `error`,
-    'import/no-unused-modules': [
-      `error`,
-      {
-        missingExports: true,
-        unusedExports: true,
-      },
-    ],
+    // Causes problems for files that might just run a file e.g. a simple browser script that doesn't export
+    'import/no-unused-modules': `off`,
 
     // Module systems
     'import/no-amd': `error`,
@@ -71,8 +66,8 @@ module.exports = {
     ],
     // Enabled in browser configs
     'import/no-nodejs-modules': `off`,
-    // NOTE: Not fully sure what this does, will revisit if needed
-    'import/unambiguous': `error`,
+    // No idea what this does, and it causes problems literally everywhere, so off it stays for now
+    'import/unambiguous': `off`,
 
     // Stylistic
     'import/dynamic-import-chunkname': `off`,
@@ -84,7 +79,8 @@ module.exports = {
     'import/newline-after-import': [
       `error`,
       {
-        considerComments: true,
+        // Currently not actually enabled in 2.26.0, check back later
+        // considerComments: true,
         count: 1,
       },
     ],

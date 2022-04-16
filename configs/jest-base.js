@@ -125,8 +125,12 @@ module.exports = {
         ignoreTypeOfDescribeName: false,
         // Some interesting options for mustMatch/mustNotMatch if needs arise
         // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/valid-title.md#mustmatch--mustnotmatch
-        mustMatch: [],
-        mustNotMatch: [`\\.$`, `Titles should not end with a period`],
+        // mustMatch: [],
+        mustNotMatch: {
+          describe: [`\\.$`, `Titles should not end with a period`],
+          it: [`\\.$`, `Titles should not end with a period`],
+          test: [`\\.$`, `Titles should not end with a period`],
+        },
       },
     ],
 
