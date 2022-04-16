@@ -1,3 +1,12 @@
+const {
+  audioComponents,
+  headingComponents,
+  imageComponents,
+  inputComponents,
+  linkComponents,
+  videoComponents,
+} = require(`../utils/components`)
+
 module.exports = {
   plugins: [`jsx-a11y`, `react`, `react-hooks`],
   parserOptions: {
@@ -114,8 +123,18 @@ module.exports = {
       },
     ],
     // Override with a comment on a case-by-case basis
-    'react/no-unsafe': [`error`, { checkAliases: true }],
-    'react/no-unstable-nested-components': [`error`, { allowAsProps: true }],
+    'react/no-unsafe': [
+      `error`,
+      {
+        checkAliases: true,
+      },
+    ],
+    'react/no-unstable-nested-components': [
+      `error`,
+      {
+        allowAsProps: true,
+      },
+    ],
     'react/no-unused-class-component-methods': `error`,
     'react/no-unused-prop-types': [
       `error`,
@@ -364,22 +383,23 @@ module.exports = {
     'jsx-a11y/alt-text': [
       `error`,
       {
-        elements: [`area`, `img`, `input[type="image"]``object`],
+        elements: [`area`, `img`, `input[type="image"]`, `object`],
         // Can specify any custom components that should also be checked by specifying "domEl": ["Custom1"]
+        img: imageComponents,
       },
     ],
     'jsx-a11y/anchor-has-content': [
       `error`,
       {
         // Link component(s) go in this array
-        components: [],
+        components: linkComponents,
       },
     ],
     'jsx-a11y/anchor-is-valid': [
       `error`,
       {
         aspects: [`noHref`, `preferButton`, `invalidHref`],
-        components: [],
+        components: linkComponents,
         specialLink: [],
       },
     ],
@@ -397,14 +417,14 @@ module.exports = {
     'jsx-a11y/autocomplete-valid': [
       `error`,
       {
-        inputComponents: [],
+        inputComponents,
       },
     ],
     'jsx-a11y/click-events-have-key-events': `error`,
     'jsx-a11y/heading-has-content': [
       `error`,
       {
-        components: [],
+        components: headingComponents,
       },
     ],
     'jsx-a11y/html-has-lang': `error`,
@@ -412,7 +432,7 @@ module.exports = {
     'jsx-a11y/img-redundant-alt': [
       `error`,
       {
-        components: [],
+        components: imageComponents,
         words: [`image`, `photo`, `picture`],
       },
     ],
@@ -426,7 +446,7 @@ module.exports = {
       `error`,
       {
         assert: `both`,
-        controlComponents: [],
+        controlComponents: inputComponents,
         depth: 3,
         labelAttributes: [`for`, `htmlFor`, `label`],
         labelComponents: [],
@@ -436,9 +456,9 @@ module.exports = {
     'jsx-a11y/media-has-caption': [
       `error`,
       {
-        audio: [],
+        audio: audioComponents,
         track: [],
-        video: [],
+        video: videoComponents,
       },
     ],
     'jsx-a11y/mouse-events-have-key-events': `error`,
