@@ -341,7 +341,57 @@ module.exports = {
     'no-restricted-globals': `off`,
     // May be useful in the future to remind if I have specific go-tos and forget about them https://eslint.org/docs/rules/no-restricted-imports#options
     'no-restricted-imports': `off`,
-    'no-restricted-properties': `off`,
+    'no-restricted-properties': [
+      `error`,
+      {
+        object: `arguments`,
+        property: `callee`,
+        message: `arguments.callee is deprecated`,
+      },
+      {
+        object: `global`,
+        property: `isFinite`,
+        message: `Use Number.isFinite instead`,
+      },
+      {
+        object: `self`,
+        property: `isFinite`,
+        message: `Use Number.isFinite instead`,
+      },
+      {
+        object: `window`,
+        property: `isFinite`,
+        message: `Use Number.isFinite instead`,
+      },
+      {
+        object: `global`,
+        property: `isNaN`,
+        message: `Use Number.isNaN instead`,
+      },
+      {
+        object: `self`,
+        property: `isNaN`,
+        message: `Use Number.isNaN instead`,
+      },
+      {
+        object: `window`,
+        property: `isNaN`,
+        message: `Use Number.isNaN instead`,
+      },
+      {
+        property: `__defineGetter__`,
+        message: `Use Object.defineProperty instead.`,
+      },
+      {
+        property: `__defineSetter__`,
+        message: `Use Object.defineProperty instead.`,
+      },
+      {
+        object: `Math`,
+        property: `pow`,
+        message: `Use the exponentiation operator (**) instead.`,
+      },
+    ],
     // Could be useful if I find specific patterns that I don't like, explanation here https://eslint.org/docs/rules/no-restricted-syntax
     'no-restricted-syntax': `off`,
     'no-return-assign': [`error`, `always`],
