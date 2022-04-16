@@ -19,7 +19,7 @@
     "./react-ts": "./configs/react-ts.js"
   },
   "scripts": {
-    "lint": "eslint ./test-files/*"
+    "lint": "eslint ./test/*"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.12.1",
