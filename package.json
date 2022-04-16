@@ -22,36 +22,104 @@
     "lint": "eslint ./test/*"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.12.1",
-    "@typescript-eslint/parser": "^5.12.1",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-html": "^6.0.2",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.1.4",
     "eslint-plugin-jest-formatting": "^3.1.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^3.0.0",
-    "prettier": "^2.0.2"
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "prettier": "^2.6.2"
   },
   "devDependencies": {
-    "eslint": "^8.9.0"
+    "eslint": "^8.13.0",
+    "typescript": "^4.6.3"
   },
   "peerDependencies": {
-    "eslint": "^8.9.0"
+    "eslint": "^8.13.0"
   },
   "eslintConfig": {
-    "extends": [
-      "./index.js"
-    ],
-    "rules": {
-      "id-length": "off",
-      "max-lines": "off",
-      "no-magic-numbers": "off",
-      "sort-keys": "off"
-    }
+    "overrides": [
+      {
+        "files": [
+          "./configs/**/*.js"
+        ],
+        "extends": "./configs/node-js.js",
+        "rules": {
+          "id-length": "off",
+          "max-lines": "off",
+          "no-magic-numbers": "off",
+          "sort-keys": "off",
+
+          "import/no-commonjs": "off"
+        }
+      },
+      {
+        "files": [
+          "./test/browser-js.js"
+        ],
+        "extends": "./configs/browser-js.js"
+      },
+      {
+        "files": [
+          "./test/browser-ts.js"
+        ],
+        "extends": "./configs/browser-ts.js"
+      },
+      {
+        "files": [
+          "./test/jest-js.js"
+        ],
+        "extends": "./configs/jest-js.js"
+      },
+      {
+        "files": [
+          "./test/jest-ts.js"
+        ],
+        "extends": "./configs/jest-ts.js"
+      },
+      {
+        "files": [
+          "./test/node-js.js"
+        ],
+        "extends": "./configs/node-js.js"
+      },
+      {
+        "files": [
+          "./test/node-ts.js"
+        ],
+        "extends": "./configs/node-ts.js"
+      },
+      {
+        "files": [
+          "./test/preact-js.js"
+        ],
+        "extends": "./configs/preact-js.js"
+      },
+      {
+        "files": [
+          "./test/preact-ts.js"
+        ],
+        "extends": "./configs/preact-ts.js"
+      },
+      {
+        "files": [
+          "./test/react-js.js"
+        ],
+        "extends": "./configs/react-js.js"
+      },
+      {
+        "files": [
+          "./test/react-ts.js"
+        ],
+        "extends": "./configs/react-ts.js"
+      }
+    ]
   }
 }
