@@ -1,3 +1,6 @@
 module.exports = {
-  extends: [`./eslint-base.js`, `./node-base.js`],
+  extends: [`./common-js.js`, `./node-base.js`],
+  rules: {
+    'import/extensions': [`error`, `always`],
+  },
 }

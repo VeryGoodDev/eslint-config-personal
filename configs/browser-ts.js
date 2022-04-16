@@ -1,8 +1,11 @@
 module.exports = {
-  extends: [`./ts-base.js`],
+  extends: [`./common-ts.js`],
   env: {
     browser: true,
     webextensions: true,
     worker: true,
+  },
+  rules: {
+    'import/no-nodejs-modules': `error`,
   },
 }

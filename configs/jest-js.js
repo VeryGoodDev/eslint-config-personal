@@ -1,3 +1,3 @@
 module.exports = {
-  extends: [`./eslint-base.js`, `./jest-base.js`],
+  extends: [`./common-js.js`, `./jest-base.js`],
 }

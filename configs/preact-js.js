@@ -1,5 +1,5 @@
 module.exports = {
-  extends: [`./eslint-base.js`, `./react-base.js`],
+  extends: [`./common-js.js`, `./react-base.js`],
   settings: {
     react: {
       pragma: `h`,

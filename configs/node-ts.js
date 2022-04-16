@@ -1,3 +1,6 @@
 module.exports = {
-  extends: [`./ts-base.js`, `./node-base.js`],
+  extends: [`./common-ts.js`, `./node-base.js`],
+  rules: {
+    'import/extensions': [`error`, `always`],
+  },
 }

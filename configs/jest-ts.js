@@ -1,5 +1,5 @@
 module.exports = {
-  extends: [`./ts-base.js`, `./jest-base.js`],
+  extends: [`./common-ts.js`, `./jest-base.js`],
   rules: {
     '@typescript-eslint/unbound-method': `off`,
     'jest/unbound-method': [

@@ -1,5 +1,5 @@
 module.exports = {
-  extends: [`./ts-base.js`, `./react-base.js`],
+  extends: [`./common-ts.js`, `./react-base.js`],
   settings: {
     react: {
       pragma: `React`,
