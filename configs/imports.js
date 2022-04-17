@@ -39,7 +39,12 @@ module.exports = {
     'import/no-deprecated': `error`,
     'import/no-extraneous-dependencies': [
       `error`,
-      { devDependencies: false, optionalDependencies: true, peerDependencies: true, bundledDependencies: false },
+      {
+        bundledDependencies: true,
+        devDependencies: true,
+        optionalDependencies: true,
+        peerDependencies: true,
+      },
     ],
     'import/no-mutable-exports': `error`,
     'import/no-named-as-default-member': `error`,
