@@ -25,8 +25,9 @@ module.exports = {
     'node/no-process-exit': `error`,
     // Not something I've ever dealt with before, can add convertPath settings as needed if I do
     'node/no-unpublished-bin': [`error`, { convertPath: {} }],
-    'node/no-unpublished-import': `error`,
-    'node/no-unpublished-require': `error`,
+    // Not fully sure what these no-unpublished- rules are doing but they are causing errors that don't make sense so off they will stay
+    'node/no-unpublished-import': `off`,
+    'node/no-unpublished-require': `off`,
     // These unsupported feature rules are nice in theory, but the plugin hasn't been updated in awhile and the JS ecosystem moves too fast to reasonably expect to keep it or your own code up-to-date all the time, so I'd rather keep these off and just use good judgment on whether something is supported well enough to use
     'node/no-unsupported-features/es-builtins': `off`,
     'node/no-unsupported-features/es-syntax': `off`,
