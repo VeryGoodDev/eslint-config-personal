@@ -9,4 +9,13 @@ module.exports = {
     formComponents: [{ name: `Form`, formAttribute: `endpoint` }],
     linkComponents: [{ name: `Link`, linkAttribute: `to` }],
   },
+  rules: {
+    'react/jsx-filename-extension': [
+      `error`,
+      {
+        allow: `always`,
+        extensions: [`.tsx`],
+      },
+    ],
+  },
 }
