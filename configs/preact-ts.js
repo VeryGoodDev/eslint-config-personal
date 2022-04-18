@@ -1,5 +1,5 @@
 module.exports = {
-  extends: [`./common-ts.js`, `./react-base.js`],
+  extends: [`./browser-ts.js`, `./react-base.js`],
   settings: {
     react: {
       pragma: `h`,
