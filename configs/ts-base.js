@@ -582,6 +582,11 @@ module.exports = {
     '@typescript-eslint/comma-dangle': [
       `error`,
       {
+        // From base eslint
+        arrays: `always`,
+        exports: `always`,
+        imports: `always`,
+        objects: `always`,
         // TS-specific
         enums: `always-multiline`,
         generics: `never`,
