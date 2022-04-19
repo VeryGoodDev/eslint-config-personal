@@ -583,10 +583,10 @@ module.exports = {
       `error`,
       {
         // From base eslint
-        arrays: `always`,
-        exports: `always`,
-        imports: `always`,
-        objects: `always`,
+        arrays: `always-multiline`,
+        exports: `always-multiline`,
+        imports: `always-multiline`,
+        objects: `always-multiline`,
         // TS-specific
         enums: `always-multiline`,
         generics: `never`,
