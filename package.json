@@ -1,6 +1,6 @@
 {
   "name": "@vgd/eslint-config-personal",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "description": "Personal preferences for eslint",
   "repository": "https://github.com/verygooddev/eslint-config-personal",
   "author": "VeryGoodDev <very_good_dev@outlook.com>",
