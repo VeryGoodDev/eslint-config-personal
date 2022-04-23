@@ -317,7 +317,7 @@ module.exports = {
     'react/jsx-one-expression-per-line': [
       `error`,
       {
-        allow: `literal`,
+        allow: `single-child`,
       },
     ],
     'react/jsx-pascal-case': [
