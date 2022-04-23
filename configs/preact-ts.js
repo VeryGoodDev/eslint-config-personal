@@ -17,6 +17,12 @@ module.exports = {
         extensions: [`.tsx`],
       },
     ],
+    'react/no-unknown-property': [
+      `error`,
+      {
+        ignore: [`class`, `for`],
+      },
+    ],
   },
   overrides: [
     {

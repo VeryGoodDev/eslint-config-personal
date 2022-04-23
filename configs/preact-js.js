@@ -9,4 +9,12 @@ module.exports = {
     formComponents: [{ name: `Form`, formAttribute: `endpoint` }],
     linkComponents: [{ name: `Link`, linkAttribute: `to` }],
   },
+  rules: {
+    'react/no-unknown-property': [
+      `error`,
+      {
+        ignore: [`class`, `for`],
+      },
+    ],
+  },
 }
