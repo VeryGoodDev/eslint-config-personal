@@ -48,7 +48,8 @@ module.exports = {
         allowBatchAssign: false,
       },
     ],
-    'n/file-extension-in-import': [`error`, `always`],
+    // Too heavy-handed, was having issues recognizing a nested scoped package as a module not needing an extension
+    'n/file-extension-in-import': `off`,
     'n/global-require': `error`,
     'n/no-mixed-requires': [
       `error`,
