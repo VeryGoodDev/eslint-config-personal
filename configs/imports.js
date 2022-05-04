@@ -24,7 +24,7 @@ module.exports = {
     'import/no-relative-parent-imports': `off`,
     'import/no-restricted-paths': `off`,
     'import/no-self-import': `error`,
-    // Docs warn that there may be false positives if using something besides Node or Webpack, so this only gets turned on for the node-js config for now
+    // Better handled by TypeScript and the Node equivalent
     'import/no-unresolved': `off`,
     'import/no-useless-path-segments': [
       `error`,
