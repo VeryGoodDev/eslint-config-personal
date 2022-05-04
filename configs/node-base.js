@@ -17,8 +17,9 @@ module.exports = {
     'n/no-exports-assign': `off`,
     'n/no-extraneous-import': `error`,
     'n/no-extraneous-require': `error`,
-    'n/no-missing-import': `error`,
-    'n/no-missing-require': `error`,
+    // These no-missing- rules are being a little flaky with relative paths, so off they go for now
+    'n/no-missing-import': `off`,
+    'n/no-missing-require': `off`,
     'n/no-new-require': `error`,
     'n/no-path-concat': `error`,
     // Generally a good practice to follow, the docs for this rule convinced me. May override via comment occasionally if needed
