@@ -451,7 +451,7 @@ module.exports = {
     'no-void': [
       `error`,
       {
-        allowAsStatement: false,
+        allowAsStatement: true,
       },
     ],
     'no-warning-comments': `off`,
