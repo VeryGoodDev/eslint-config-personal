@@ -300,6 +300,12 @@ module.exports = {
         trailingUnderscore: `forbid`,
       },
       {
+        selector: `objectLiteralProperty`,
+        format: [`camelCase`, `PascalCase`, `UPPER_CASE`],
+        leadingUnderscore: `forbid`,
+        trailingUnderscore: `forbid`,
+      },
+      {
         selector: `enumMember`,
         format: [`UPPER_CASE`],
         leadingUnderscore: `forbid`,
