@@ -397,19 +397,8 @@ module.exports = {
         allowedNames: [],
       },
     ],
-    '@typescript-eslint/no-type-alias': [
-      `error`,
-      {
-        allowAliases: `never`,
-        allowCallbacks: `never`,
-        allowConditionalTypes: `never`,
-        allowConstructors: `never`,
-        allowLiterals: `never`,
-        allowMappedTypes: `never`,
-        allowTupleTypes: `never`,
-        allowGenerics: `never`,
-      },
-    ],
+    // Tried it, didn't like it. Too much nuance to be useful IMO
+    '@typescript-eslint/no-type-alias': `off`,
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': [
       `error`,
       {
