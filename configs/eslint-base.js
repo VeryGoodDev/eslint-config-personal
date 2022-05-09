@@ -639,7 +639,20 @@ module.exports = {
     'new-parens': [`warn`, `always`],
     'newline-per-chained-call': `warn`,
     // Might need to consider object option for exceptions if this causes troubles https://eslint.org/docs/rules/no-extra-parens#options
-    'no-extra-parens': [`warn`, `all`],
+    'no-extra-parens': [
+      `warn`,
+      `all`,
+      {
+        conditionalAssign: true,
+        enforceForArrowConditionals: false,
+        enforceForFunctionPrototypeMethods: false,
+        enforceForNewInMemberExpressions: false,
+        enforceForSequenceExpressions: true,
+        ignoreJSX: `multi-line`,
+        nestedBinaryExpressions: false,
+        returnAssign: true,
+      },
+    ],
     'no-mixed-spaces-and-tabs': `error`,
     'no-multi-spaces': `warn`,
     'no-multiple-empty-lines': [
