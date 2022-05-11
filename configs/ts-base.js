@@ -650,7 +650,7 @@ module.exports = {
       {
         detectObjects: false,
         enforceConst: false,
-        ignore: [0, 1, 2],
+        ignore: [-1, 0, 1, 2],
         ignoreArrayIndexes: true,
         ignoreDefaultValues: true,
         // TypeScript specific

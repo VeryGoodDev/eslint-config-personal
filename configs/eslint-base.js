@@ -304,7 +304,7 @@ module.exports = {
         detectObjects: false,
         enforceConst: false,
         // Ones I've found I use often enough that they aren't usually a magic number
-        ignore: [0, 1, 2],
+        ignore: [-1, 0, 1, 2],
         ignoreArrayIndexes: true,
         ignoreDefaultValues: true,
       },
