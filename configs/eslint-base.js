@@ -734,7 +734,7 @@ module.exports = {
       {
         arrowParens: `always`,
         endOfLine: `lf`,
-        printWidth: 120,
+        printWidth: 80,
         semi: false,
         singleQuote: true,
         trailingComma: `es5`,
