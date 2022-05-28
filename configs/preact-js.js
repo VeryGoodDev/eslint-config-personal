@@ -16,5 +16,6 @@ module.exports = {
         ignore: [`class`, `for`],
       },
     ],
+    'react/prop-types': `off`,
   },
 }
